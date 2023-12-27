@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { MyServicesComponent } from './components/my-services/my-services.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { AboutComponent } from './components/about/about.component';
     RouterOutlet,
     HeaderComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    MyServicesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
