@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { NavegacaoLink } from '../models/navegacao-link.model';
 import { CommonModule } from '@angular/common';
 
@@ -12,11 +12,14 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class HeaderComponent implements OnInit {
+   @ViewChild('header') header!: ElementRef;
+   public isScrolled = false;
+
   public listaNavegacao: NavegacaoLink[] = [
     {chaveId: '#home', nomeLink: 'Home'},
-    {chaveId: '#sobre', nomeLink: 'Sobre mim'},
-    {chaveId: '#projetos', nomeLink: 'Projetos'},
-    {chaveId: '#contato', nomeLink: 'Contato'},
+    {chaveId: '#about', nomeLink: 'Sobre mim'},
+    {chaveId: '#projects', nomeLink: 'Projetos'},
+    {chaveId: '#contact', nomeLink: 'Contato'},
   ];
 
   public mostrarMenu: boolean = false;
@@ -24,4 +27,9 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
 }
