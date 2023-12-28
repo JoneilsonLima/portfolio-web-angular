@@ -1,4 +1,8 @@
 /*--------- HOME --------------*/
+section {
+  padding: 4rem 3rem;
+}
+
 .home__container {
   padding-top: 2rem;
 }
@@ -23,7 +27,7 @@
 .home__img {
   position: relative;
   z-index: 10;
-  height: 250px;
+  // height: 250px;
 }
 
 .home__shadow {
@@ -57,7 +61,7 @@
 }
 
 .home__perfil .geometric-box {
-  top: 2.5rem;
+  top: 2rem;
   left: -.7rem;
   z-index: 10;
 }

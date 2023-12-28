@@ -5,6 +5,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { MyServicesComponent } from './components/my-services/my-services.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { MyServicesComponent } from './components/my-services/my-services.compon
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    MyServicesComponent
+    MyServicesComponent,
+    ProjectsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
